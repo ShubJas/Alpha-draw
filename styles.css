@@ -1,0 +1,189 @@
+html {
+    height: 100%; /* Helps ensure that the body takes the full viewport height */
+    margin: 0; /* Reset default margin */
+}
+
+body {
+    margin: 0; /* Reset default margin */
+    font-family: 'Arial', sans-serif; /* Font for the whole page */
+    background-image: url('images/main_bg.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    overflow: hidden; /* This will prevent scrolling */
+    background-position: center; /* Center the image in the viewport */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    height: 100vh; /* Full height to the viewport */
+}
+
+
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden; /* Prevents scrolling within the app div */
+}
+
+#navigation {
+    display: flex;
+    align-items: center; /* This will align the buttons and image on the same line */
+    justify-content: center;
+    margin-bottom: 20px; /* Add some space between the navigation and the drawing area */
+}
+
+#alphabet-display {
+    width: 20%;
+    height: 100%;
+    background-color: #f0f0f0; /* You might want to change this if it's too light */
+    display: flex;
+    flex-direction: column; /* Changed from row to column */
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    position: relative; /* For absolute positioning of buttons */
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    cursor: pointer; /* Add a pointer cursor to indicate these are clickable */
+}
+
+#prev-letter, #next-letter, #eraser-button {
+    /* Common styles for buttons with icons */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    width: 50px; /* Example size, adjust as needed */
+    height: 50px; /* Example size, adjust as needed */
+    cursor: pointer;
+    text-indent: -9999px; /* Hides the text */
+    outline: none; /* Remove the outline to maintain the button appearance on focus */
+}
+
+#prev-letter {
+    background-image: url('images/prev.png');
+}
+
+#next-letter {
+    background-image: url('images/next.png');
+}
+
+#eraser-button {
+    background-image: url('images/eraser.png');
+}
+
+
+
+#clear-canvas, #undo-button, #redo-button, #audio-button{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    width: 50px; 
+    height: 50px; 
+    cursor: pointer;
+    text-indent: -9999px; 
+    outline: none; 
+}
+
+#clear-canvas {
+    background-image: url('images/clear.png');
+}
+
+#audio-button {
+    background-image: url('images/audio_icon.png');
+}
+
+#undo-button {
+    background-image: url('images/undo.png');
+}
+
+#redo-button {
+    background-image: url('images/redo.png');
+}
+
+#prev-letter, #next-letter, #eraser-button, #clear-canvas, #undo-button, #redo-button, #audio-button {
+    background-color: transparent; 
+}
+#prev-letter, #next-letter, #eraser-button, #clear-canvas, #undo-button, #redo-button, #audio-button {
+    border: none; 
+}
+
+
+
+
+
+
+
+#letter-image {
+    max-height: 200px;
+    margin: 0 20px; 
+}
+
+#alphabet-display, #drawing-area {
+    width: 80%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+}
+
+#drawing-area {
+    position: relative;
+    width: 80%;
+    height: 300px; 
+    margin-top: 20px;
+    border: 1px solid #000000;
+}
+
+canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#color-palette {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.color-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 20px; 
+    outline: none; 
+}
+
+#tools {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 10px;
+}
+
+#eraser-button, #clear-canvas {
+    padding: 10px;
+    margin: 5px; 
+    font-size: 1em;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+

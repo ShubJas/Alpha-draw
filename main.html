@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AlphaDraw- Alphabet Learning System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="navigation">
+            <button id="prev-letter" onclick="navigateLetter(-1)">Prev</button>
+            <img id="letter-image" src="" alt="Letter image" />
+            <button id="next-letter" onclick="navigateLetter(1)">Next</button>
+        </div>
+
+        <div id="tools">
+            <div id="color-palette">
+                <button class="color-button" onclick="changeColor('#FF0000')"
+                    style="background-color: #FF0000;"></button>
+                <button class="color-button" onclick="changeColor('#00FF00')"
+                    style="background-color: #00FF00;"></button>
+                <button class="color-button" onclick="changeColor('#0000FF')"
+                    style="background-color: #0000FF;"></button>
+                <button class="color-button" onclick="changeColor('#FFFF00')"
+                    style="background-color: #FFFF00;"></button>
+                <button class="color-button" onclick="changeColor('#000000')"
+                    style="background-color: #000000;"></button>
+            </div>
+            <button id="eraser-button" onclick="activateEraser()">
+                <img src="images/eraser.png" alt="Eraser" />
+            </button>
+            <button id="clear-canvas" onclick="clearCanvas()">
+                <img src="images/clear.png" alt="Clear Canvas" />
+            </button>
+            <button id="undo-button" onclick="undo()">
+                <img src="images/undo.png" alt="Undo" />
+            </button>
+            <button id="redo-button" onclick="redo()">
+                <img src="images/redo.png" alt="Redo" />
+            </button>
+            <button id="audio-button" onclick="playLetterSound()">
+                <img src="images/audio_icon.png" alt="Play Letter Sound" />
+            </button>
+            
+            
+            
+            <!-- You could add more tool buttons here in the future -->
+        </div>
+
+
+        <div id="drawing-area">
+            <canvas id="background-canvas"></canvas> <!-- Background canvas for grid and letter -->
+            <canvas id="letter-canvas"></canvas> <!-- Top canvas for drawing -->
+        </div>
+
+    </div>
+    <script src="script2.js"></script>
+</body>
+
+</html>
